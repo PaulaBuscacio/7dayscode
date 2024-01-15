@@ -22,10 +22,12 @@ public class SearchClientWebReactiveService {
                 .get()
                 .uri("/?type=series&t=" + serie + "&apikey=" + API_KEY)
                 .retrieve()
-                .bodyToMono(String.class)
+                .bodyToMono(String.class)                 
                 .block();
+                
+        
 
-        System.out.println(response);
+       // System.out.println(response);
         return response;
     }
 }
