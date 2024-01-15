@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.buscacio.dayscode.dto.Movie;
 import net.buscacio.dayscode.service.SearchClientWebReactiveService;
 
 @RestController
@@ -20,9 +21,9 @@ public class APIController {
 	}
 	
 	
-	@GetMapping("/{serie}")
-	public ResponseEntity<String> getAPI(@PathVariable String serie) {
-		String response = searchClient.searchAPI(serie);
+	@GetMapping("/{movie}")
+	public ResponseEntity<Movie> getAPI(@PathVariable String movie) {
+		Movie response = searchClient.searchAPI(movie);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 		
 		
