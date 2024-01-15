@@ -1,0 +1,12 @@
+# Arquivos temporários
+*.class
+*.log
+*.jar
+
+# Diretório de saída
+target/
+
+# Arquivos de configuração específicos para IDEs
+.idea/
+
+
